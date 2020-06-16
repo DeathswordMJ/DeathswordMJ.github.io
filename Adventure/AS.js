@@ -17,11 +17,11 @@
 
 // level 2
 
-["flag", "rock","","","",
-"fenceside", "rock","","","wings",
-"", "tree","animate","animate","animate",
-"", "water","","","",
-"", "fence","","boyup","" ]
+["wings", "rock","animate","tree","flag",
+"", "rock","animate","tree","",
+"", "","animate","tree","fenceside",
+"", "water","animate","bush","",
+"boyup", "rock","animate","fencetop","" ]
  
   ]; // end of levels
  
@@ -330,19 +330,12 @@ return;
 
 } // Instructions
 
-// resume game play
-function resumeGame() {
-if (!controlPlay){
- controlPlay = window.setInterval(tryToMove, 1000/60 );
-}
-} // resumeGame
-
 
 // pause game play
-function pauseGame() {
+function clock() {
   window.clearInterval(controlPlay);
   controlPlay = false;
-} // pauseGame
+} // clock
 
 // start game play
 function startGame() {

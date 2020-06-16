@@ -17,7 +17,7 @@ body {
 }
 
 #gameBoard div{
-  background-color:#00EE00;
+  background-color:#319529;
   background-repeat: no-repeat;
   background-size:cover;
 	
@@ -209,6 +209,10 @@ body {
 
 .tree {
   background-image: url("images/tree.png");
+}
+
+.clock {
+  background-image: url("images/clock.jpg");
 }
 
 .bridge {
