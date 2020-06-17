@@ -211,7 +211,7 @@ newClass += " bridge";
  
  // if its is an enemy
  if (nextClass.includes("lion")){
- location.replace("lose.html");
+ location.replace("youlose.html");
  BoyDie.play();
  }
  // move up to next level if needed
