@@ -2,9 +2,9 @@
  const levels = [
 // level 0
 ["flag", "rock","","tree","wings",
-"", "rock","","","",
+"", "rock","","bush","",
 "", "fencetop","animate","animate","animate",
-"rock", "water","fenceside","","",
+"rock", "water","","fenceside","",
 "", "","","boyup",""],
 
 // level 1
@@ -226,6 +226,11 @@ document.getElementById("levelup").style.display = "none";
 currentLevel++;
 loadLevel();
 
+if(currentLevel > 3){
+ location.replace("finalpage.html");
+ 
+ }
+
 }, 1000);
 
 } // if
@@ -246,6 +251,8 @@ gridBoxes[i].className = levelMap[i];
 if (levelMap[i].includes("boyup")) currentLocationOfBoy = i;
  } // for
  
+ 
+
  animateBoxes = document.querySelectorAll(".animate");
  
  animateEnemy(animateBoxes, 0, "right");
@@ -306,7 +313,8 @@ animateEnemy(boxes, index, direction);
 //if enemy hits boy
 if ((boxes[index].className).includes("boyup") || (boxes[index].className).includes("boyright")
 || (boxes[index].className).includes("boydown") || (boxes[index].className).includes("boyleft")) {
-document.getElementById("lose").style.display = "block";
+  location.replace("youlose.html")
+
 return;
 }//if
 
@@ -331,15 +339,11 @@ return;
 } // Instructions
 
 
-// pause game play
-function clock() {
-  window.clearInterval(controlPlay);
-  controlPlay = false;
-} // clock
+
 
 // start game play
 function startGame() {
-loadlevel();
+loadLevel();
 
 
 if (!controlPlay){
@@ -348,16 +352,15 @@ if (!controlPlay){
 
 } // startGame
 
-//stop game play
 function stopGame() {
-  window.clearInterval(controlPlay);
-  controlPlay = false;
- 
+//  window.clearInterval(controlPlay);
+//  controlPlay = false;
+clearTimeout(currentAnimation);
   // showLightBox with score
   let message1 = "You died!!!";
   let message2 = "Press start to try again";
-  window.clearInterval(controlPlay);
-  controlPlay = false;
+ // window.clearInterval(controlPlay);
+ // controlPlay = false;
  
 
 showLightBox(message1, message2);
@@ -367,7 +370,13 @@ showLightBox(message1, message2);
 } // stopGame
 
  
- 
+function goBack() {
+
+location.replace("index.html");
+
+
+
+} // goBack 
  
   /****** Light Box Code ******/
 
