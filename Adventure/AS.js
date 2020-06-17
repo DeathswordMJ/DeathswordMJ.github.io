@@ -233,11 +233,13 @@ Win.play();
 setTimeout(function(){
 document.getElementById("levelup").style.display = "none";
 currentLevel++;
-loadLevel();
 
-if(currentLevel => 3){
+
+if(currentLevel == 3){
  location.replace("finalpage.html");
  
+ }else{
+	loadLevel();
  }
 
 }, 1000);
