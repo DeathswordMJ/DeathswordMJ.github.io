@@ -77,7 +77,7 @@ body {
 
 #title {
   text-align:center;
-  color:blacks;
+  color:black;
   position:absolute;
   bottom:10px;
   left:40%;
@@ -132,7 +132,7 @@ body {
 	line-height:20px;
 	font-size:1.7em;
 	border-radius:7px;
-	position:center;
+	
 	
 }
 
