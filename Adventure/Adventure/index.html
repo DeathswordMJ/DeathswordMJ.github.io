@@ -2,7 +2,8 @@
   <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Albert and Simon's Adventure</title>
+    <title>Boy Adventures</title>
+	<link rel='icon' href='favicon.ico' type='image/x-icon'>
     
     <!-- include an external style sheet -->
     <link rel="stylesheet" href="AS.css">  
@@ -12,6 +13,9 @@
   </head>
   
   <body>
+  
+
+
     <div id="gameBoard"> 
 		<div></div>
 		<div></div>
@@ -45,9 +49,33 @@
 		
 		
 	</div>
+
+		<div id = "controlpanel">
+		<div onclick ="Instructions()" id = "Instructions" class= "controls">
+		Instructions</div>
+		
+		
+	</div>
+	
+	
+	
+	<div id = "header">
+	<h1 id = "title">Boy Adventures</h1>
+	</div>
+	
 	
 	<div class="message" id = "lose">You Lose</div>
 	<div class="message" id = "levelup">Next Level...</div>
+	
+	
+		<div id = "positionMessage">
+	   <div id = "boundaryMessage" class="hidden">
+	   <img id = "x" src="images/x.png" alt="close" onclick= "continueGame()">
+	   <h1 class= "titletext" id="message">Warning</h1>
+	   <p class= "titletext" id="message2"></p>
+	</div>
+	</div>
+	 
 	
 	<script src="AS.js"></script>
   </body>

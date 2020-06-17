@@ -1,5 +1,13 @@
 body {
 	background-color: black;
+	background-image: url("https://i.pinimg.com/originals/ce/7f/55/ce7f55d0ce9ec88c238f4f0f5731d809.jpg");
+
+}
+
+.body2 {
+	background-color: black;
+	background-image: url("https://coolbackgrounds.io/images/backgrounds/index/disco-dba865f1.png");
+
 }
 
 #gameBoard {
@@ -10,13 +18,13 @@ body {
 	justify-content:center;
 	width:600px;
 	height:600px;
-	
-	margin-left:auto;
-	margin-right:auto;
+	width:100%;
+    height:100vh;
+    position:fixed;
 }
 
 #gameBoard div{
-  background-color:#00EE00;
+  background-color:#319529;
   background-repeat: no-repeat;
   background-size:cover;
 	
@@ -38,6 +46,98 @@ body {
  line-height:100vh;
 
 }
+
+#header{
+  width:100%; 
+  left:42%;	
+	
+}
+
+#header h2 {
+  position:absolute;	
+
+  color:white;
+	
+}
+
+#header #left{
+  left:30px;	
+}
+
+#header #right{
+  right:30px;	
+}
+
+.text{
+	color:white;
+	text-align:center;
+	
+
+}
+
+#title {
+  text-align:center;
+  color:blacks;
+  position:absolute;
+  bottom:10px;
+  left:40%;
+  font-size:2.8em;
+  
+
+}
+
+
+/***** Control Panel *****/
+
+#controlpanel {
+	position:absolute;
+	top:10px;
+	right:10px;
+	z-index:1;
+}
+
+#controlpanel2 {
+	position:absolute;
+	top:20%;
+	left:43%;
+	bottom:50%;	
+	z-index:1;
+}
+
+
+.controls {
+	display:inline-block;
+	padding:6px;
+	width:100px;
+	height:25px;
+	background-color:white;
+	color:black;
+	vertical-align:top;
+	text-align:center;
+	line-height:20px;
+	font-size:0.7em;
+	border-radius:7px;
+	
+}
+
+.controls3 {
+	display:inline-block;
+	padding:6px;
+	width:200px;
+	height:25px;
+	background-color:white;
+	color:black;
+	vertical-align:center;
+	text-align:center;
+	line-height:20px;
+	font-size:1.7em;
+	border-radius:7px;
+	position:center;
+	
+}
+
+
+/***** End Control Panel *****/
 
 .boyup {
   background-image: url("images/boyup.png");
@@ -144,6 +244,57 @@ body {
   background-image: url("images/tree.png");
 }
 
+.clock {
+  background-image: url("images/clock.jpg");
+}
+
 .bridge {
   background-color:#800020 !important;
 }
+
+/***** LightBox *****/
+
+#lightbox {
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.7); 
+}
+
+#x{
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+
+.hidden {
+	display:none;
+}
+
+.unhidden{
+	display:block;
+}
+
+#positionMessage{
+	position:absolute;
+	top:45px;
+	left:0px;
+	width:100%;
+}
+
+#boundaryMessage{
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	width: 600px;
+	height:200px;
+	background-color:rgba(255,255,255,0.9);
+	z-index:1;
+	padding:30px;
+	border:thick solid #4d3e3e;
+}
+
+/***** End Lightbox *****/
+
