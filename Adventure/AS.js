@@ -22,6 +22,8 @@
 "", "","animate","tree","fenceside",
 "", "water","animate","bush","",
 "boyup", "rock","animate","fencetop","" ]
+
+
  
   ]; // end of levels
  
@@ -209,7 +211,7 @@ newClass += " bridge";
  
  // if its is an enemy
  if (nextClass.includes("lion")){
- document.getElementById("lose").style.display = "block";
+ location.replace("lose.html");
  BoyDie.play();
  }
  // move up to next level if needed
@@ -233,7 +235,7 @@ document.getElementById("levelup").style.display = "none";
 currentLevel++;
 loadLevel();
 
-if(currentLevel > 3){
+if(currentLevel => 3){
  location.replace("finalpage.html");
  
  }
@@ -279,7 +281,6 @@ this.sound.pause();
 gridBoxes[i].className = levelMap[i];
 if (levelMap[i].includes("boyup")) currentLocationOfBoy = i;
  } // for
- 
  
 
  animateBoxes = document.querySelectorAll(".animate");
