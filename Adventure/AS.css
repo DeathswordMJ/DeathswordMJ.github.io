@@ -97,10 +97,12 @@ body {
 
 #controlpanel2 {
 	position:absolute;
-	top:10px;
-	left:10px;
+	top:20%;
+	left:43%;
+	bottom:50%;	
 	z-index:1;
 }
+
 
 .controls {
 	display:inline-block;
@@ -129,6 +131,7 @@ body {
 	line-height:20px;
 	font-size:1.7em;
 	border-radius:7px;
+	position:center;
 	
 }
 

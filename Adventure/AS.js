@@ -35,6 +35,10 @@
   var currentAnimation; // alows 1 animation per level
   var widthOfBoard = 5;
   var controlPlay;  // used to control game start/stop
+  
+  var Jump = new sound("Jump.mp3");
+  var BoyDie = new sound("BoyDie.mp3");
+  var Win = new sound("Win.mp3");
  
  
   window.addEventListener("load",function (){
@@ -148,6 +152,7 @@ gridBoxes[currentLocationOfBoy].className = "";
  
  // show boy jumping
  gridBoxes[nextLocation].className = nextClass;
+ Jump.play();
  
  setTimeout(function(){
  
@@ -205,6 +210,7 @@ newClass += " bridge";
  // if its is an enemy
  if (nextClass.includes("lion")){
  document.getElementById("lose").style.display = "block";
+ BoyDie.play();
  }
  // move up to next level if needed
  levelUp(nextClass);
@@ -221,6 +227,7 @@ function levelUp(nextClass){
 if (nextClass == "flag" && wingsOn){
 document.getElementById("levelup").style.display = "block";
 clearTimeout(currentAnimation);
+Win.play();
 setTimeout(function(){
 document.getElementById("levelup").style.display = "none";
 currentLevel++;
@@ -237,7 +244,29 @@ if(currentLevel > 3){
 
 } // levelUp
 
- 
+ // object constructor to play sounds
+// https://www.w3schools.com/graphics/game_sound.asp
+function sound(src){
+this.sound = document.createElement("audio");
+this.sound.src = src;
+this.sound.setAttribute("preload", "auto");
+this.sound.setAttribute("preload", "auto");
+this.sound.style.display = "none";
+document.body.appendChild(this.sound);
+this.play = function(){
+this.sound.play();
+
+}
+this.stop = function(){
+this.sound.pause();
+
+
+
+
+}
+
+}
+
  
   // load levels 0 - maxlevel
   function loadLevel(){
